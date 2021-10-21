@@ -1,16 +1,20 @@
 function Greeter(input) {
-  //return "HELLO";
-  const myArr = input.split(" ");
-  myArr.splice(myArr.length-1, 0, "and");
-  return "Hello, " + myArr.join(' ') + "."; 
-
+  
   if(!input){
     return "Hello, my friend.";
-
   }
-  else{
-  return 'Hello, '+input;}
 
+  const myArr = input.split(" ");
+
+  if(myArr.length==1){
+    return 'Hello, '+input +".";}
+  
+
+  if(myArr.length>1){
+  myArr.splice(myArr.length-1, 0, "and");
+  return "Hello, " + myArr.join(' ') + "."; }
+
+ 
 
 }
 module.exports = Greeter;
