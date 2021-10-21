@@ -1,5 +1,7 @@
-function Greeter() {
-  
-  return "Hello, my friend.";
+function Greeter(input) {
+  //return "HELLO";
+  return 'HELLO '+input;
+
+
 }
 module.exports = Greeter;
