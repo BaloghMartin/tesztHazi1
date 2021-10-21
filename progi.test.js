@@ -1,5 +1,6 @@
 const sum = require('./progi');
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(4);
+
+emptyInputTest('üresre megnézi hogy jó-e',() => {
+  expect(Greeter()).toBe("Hello, my friend.");
 });
