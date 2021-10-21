@@ -20,12 +20,13 @@ function Greeter(...args) {
 
 
   if(args.length>0){
+    let solutionArr = [];
       for (var i = 0; i < args.length; i++) {
         const tempArr = args[i].split(" ");
-        myArr=myArr.concat(tempArr);
+        solutionArr=solutionArr.concat(tempArr);
     }
-    myArr.splice(myArr.length-1, 0, "and");
-    return "Hello, " + myArr.join(' ') + "."; }
+    solutionArr.splice(solutionArr.length-1, 0, "and");
+    return "Hello, " + solutionArr.join(' ') + "."; }
 
  
 
