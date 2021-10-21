@@ -8,6 +8,10 @@ const Greeter = require('./progi');
   });
 
   test('oneNameInputTest', () => {
-    expect(Greeter("MARTIN")).toBe("HELLO MARTIN");
+    expect(Greeter("Martin")).toBe("Hello, Martin");
   });
+
+  test('multipleNames', () => {
+    expect(Greeter("Martin, Beni")).toBe("Hello, Martin, and Beni.");
+  })
 
