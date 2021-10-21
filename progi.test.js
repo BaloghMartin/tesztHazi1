@@ -15,6 +15,6 @@ const Greeter = require('./progi');
     expect(Greeter("Martin, Beni")).toBe("Hello, Martin, and Beni.");
   })
   test('multipleNames', () => {
-    expect(Greeter("Martin", "Beni")).toBe("Hello, Martin, and Beni.");
+    expect(Greeter('Martin', 'Beni')).toBe("Hello, Martin, and Beni.");
   })
 
