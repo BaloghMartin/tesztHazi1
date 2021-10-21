@@ -6,3 +6,8 @@ const Greeter = require('./progi');
   test('emptyInputTest', () => {
     expect(Greeter()).toBe("Hello, my friend.");
   });
+
+  test('oneNameInputTest', () => {
+    expect(Greeter("MARTIN")).toBe("HELLO MARTIN");
+  });
+
