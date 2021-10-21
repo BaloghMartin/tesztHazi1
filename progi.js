@@ -1,6 +1,11 @@
 function Greeter(input) {
   //return "HELLO";
-  return 'HELLO '+input;
+  if(!input){
+    return "Hello, my friend.";
+
+  }
+  else{
+  return 'HELLO '+input;}
 
 
 }
