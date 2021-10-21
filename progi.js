@@ -8,7 +8,7 @@ function Greeter(...args) {
  
   //if(args.length==1){
     //return 'Hello, '+args[0] +".";}
-  
+  /*
   if(args.length==1){
   const myArr = args[0].split(" ");
   if(myArr.length==1){
@@ -18,15 +18,21 @@ function Greeter(...args) {
   return "Hello, " + myArr.join(' ') + "."; }}
 
 
-
-  if(args.length>0){
+ */
+  //if(args.length>0){
     let solutionArr = [];
       for (var i = 0; i < args.length; i++) {
-        const tempArr = args[i].split(" ");
+        const tempArr = args[i].split(", ");
         solutionArr=solutionArr.concat(tempArr);
     }
-    solutionArr.splice(solutionArr.length-1, 0, "and");
-    return "Hello, " + solutionArr.join(' ') + "."; }
+    for (var i = 0; i < solutionArr.length-1; i++) {
+      solutionArr[i]=solutionArr[i]+",";
+  }
+  if(solutionArr.length!=1){
+    solutionArr.splice(solutionArr.length-1, 0, "and");}
+    
+    return "Hello, " + solutionArr.join(' ') + ".";
+  // }
 
  
 
