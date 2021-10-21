@@ -1,6 +1,8 @@
-const sum = require('./progi');
+const Greeter = require('./progi');
 
+  test('itShouldWor', () => {
+    expect(true).toBe(true);  });
 
-emptyInputTest('üresre megnézi hogy jó-e',() => {
-  expect(Greeter()).toBe("Hello, my friend.");
-});
+  test('emptyInputTest', () => {
+    expect(Greeter()).toBe("Hello, my friend.");
+  });
