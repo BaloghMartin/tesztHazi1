@@ -17,4 +17,7 @@ const Greeter = require('./progi');
   test('multipleNamesAsArray', () => {
     expect(Greeter('Martin', 'Beni')).toBe("Hello, Martin, and Beni.");
   })
+  test('multipleNamesAsArrayAndNotArray', () => {
+    expect(Greeter('Martin', 'Beni, Gaga')).toBe("Hello, Martin, Beni, and Gaga.");
+  })
 
