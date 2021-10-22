@@ -30,6 +30,9 @@ function Greeter(...args) {
   if(solutionArr.length!=1){
     solutionArr.splice(solutionArr.length-1, 0, "and");}
     //minden szó szét van szedve majd csak ezeket kéne két csoportba szétdobni de nagyon jól vannak szétszedve
+    if(solutionArr[0]==solutionArr[0].toUpperCase()){
+      return  "HELLO " + solutionArr.join(' ') + "!";
+    }
     return "Hello, " + solutionArr.join(' ') + ".";
   // }
 
