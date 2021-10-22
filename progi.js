@@ -40,18 +40,20 @@ function Greeter(...args) {
     if(nonCaps.length!=0){
       for (var i = 0; i < nonCaps.length-1; i++) {
           nonCaps[i]=nonCaps[i]+","; }
-        if(nonCaps.length!=1){
+        if(nonCaps.length>1){
         nonCaps.splice(nonCaps.length-1, 0, "and");}
-      return "Hello, " + nonCaps.join(' ') + ".";}
+        }
    
     if(allCaps.length!=0){
       for (var i = 0; i < allCaps.length-1; i++) {
           allCaps[i]=allCaps[i]+","; }          
-          if(allCaps.length!=1){
+          if(allCaps.length>1){
         allCaps.splice(allCaps.length-1, 0, "AND");}
-        return  "HELLO " + allCaps.join(' ') + "!";}
-
+          }
     
+    if(nonCaps.length!=0 && allCaps.length==0){return "Hello, " + nonCaps.join(' ') + ".";}
+    if(allCaps.length!=0 && nonCaps.length==0){return  "HELLO " + allCaps.join(' ') + "!";}
+    if(allCaps.length!=0 && nonCaps.length!=0){return "Hello, " + nonCaps.join(' ') + "." + " AND HELLO " + allCaps.join(' ') + "!";}
 }
   // }
     
