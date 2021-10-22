@@ -23,6 +23,9 @@ const Greeter = require('./progi');
   test('multipleNamesAsArrayAndNotArray2', () => {
     expect(Greeter('Martin, Kris', 'Beni, Gaga')).toBe("Hello, Martin, Kris, Beni, and Gaga.");
   })
-  test('ONEnAMEiNPUTtEST', () => {
+  test('oneNameInputTestShouting', () => {
     expect(Greeter('BÉLAA')).toBe("HELLO BÉLAA!");
+  })
+  test('multiplNamesShouting', () =>{
+    expect(Greeter('BÉLA, SANYI')).toBe("HELLO SANYI, AND BÉLA!");
   })
