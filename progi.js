@@ -4,22 +4,6 @@ function Greeter(...args) {
     return "Hello, my friend.";
   }
  
-  //const myArr = input.split(" ");
- 
-  //if(args.length==1){
-    //return 'Hello, '+args[0] +".";}
-  /*
-  if(args.length==1){
-  const myArr = args[0].split(" ");
-  if(myArr.length==1){
-  return 'Hello, '+args[0] +".";}
-  if(myArr.length>1){
-  myArr.splice(myArr.length-1, 0, "and");
-  return "Hello, " + myArr.join(' ') + "."; }}
-
-
- */
-  //if(args.length>0){
     let solutionArr = [];
     let nonCaps = [];
     let allCaps = [];
@@ -34,9 +18,6 @@ function Greeter(...args) {
       else{
         nonCaps=nonCaps.concat(solutionArr[i]);
       }}
-
-    //for (var i = 0; i < solutionArr.length-1; i++) {
-      //solutionArr[i]=solutionArr[i]+","; }
     if(nonCaps.length!=0){
       for (var i = 0; i < nonCaps.length-1; i++) {
           nonCaps[i]=nonCaps[i]+","; }

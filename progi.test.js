@@ -35,3 +35,6 @@ const Greeter = require('./progi');
   test('mixed names', () =>{
   expect(Greeter('JAY', 'Maya', 'Alice', 'BOB', 'Charlotte')).toBe("Hello, Maya, Alice, and Charlotte. AND HELLO JAY, AND BOB!");
   })
+  test('mixed names', () =>{
+    expect(Greeter('JAY', 'Maya', 'Alice', 'BOB, Martin', 'Charlotte')).toBe("Hello, Maya, Alice, Martin, and Charlotte. AND HELLO JAY, AND BOB!");
+    })
