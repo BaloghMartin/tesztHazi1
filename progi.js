@@ -21,22 +21,41 @@ function Greeter(...args) {
  */
   //if(args.length>0){
     let solutionArr = [];
+    let nonCaps = [];
+    let allCaps = [];
       for (var i = 0; i < args.length; i++) {
         const tempArr = args[i].split(", ");
         solutionArr=solutionArr.concat(tempArr);
     }
-    for (var i = 0; i < solutionArr.length-1; i++) {
-      solutionArr[i]=solutionArr[i]+","; }
-  if(solutionArr.length!=1){
-    solutionArr.splice(solutionArr.length-1, 0, "and");}
-    //minden szó szét van szedve majd csak ezeket kéne két csoportba szétdobni de nagyon jól vannak szétszedve
-    if(solutionArr[0]==solutionArr[0].toUpperCase()){
-      return  "HELLO " + solutionArr.join(' ') + "!";
-    }
-    return "Hello, " + solutionArr.join(' ') + ".";
-  // }
+    for (var i = 0; i < solutionArr.length; i++) {
+      if(solutionArr[i]==solutionArr[i].toUpperCase()){
+        allCaps=allCaps.concat(solutionArr[i]);
+      }
+      else{
+        nonCaps=nonCaps.concat(solutionArr[i]);
+      }}
 
- 
+    //for (var i = 0; i < solutionArr.length-1; i++) {
+      //solutionArr[i]=solutionArr[i]+","; }
+    if(nonCaps.length!=0){
+      for (var i = 0; i < nonCaps.length-1; i++) {
+          nonCaps[i]=nonCaps[i]+","; }
+        if(nonCaps.length!=1){
+        nonCaps.splice(nonCaps.length-1, 0, "and");}
+      return "Hello, " + nonCaps.join(' ') + ".";}
+   
+    if(allCaps.length!=0){
+      for (var i = 0; i < allCaps.length-1; i++) {
+          allCaps[i]=allCaps[i]+","; }          
+          if(allCaps.length!=1){
+        allCaps.splice(allCaps.length-1, 0, "AND");}
+        return  "HELLO " + allCaps.join(' ') + "!";}
 
+    
 }
+  // }
+    
+    
+
+
 module.exports = Greeter;

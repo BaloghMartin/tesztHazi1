@@ -27,5 +27,5 @@ const Greeter = require('./progi');
     expect(Greeter('BÉLAA')).toBe("HELLO BÉLAA!");
   })
   test('multiplNamesShouting', () =>{
-    expect(Greeter('BÉLA, SANYI')).toBe("HELLO SANYI, AND BÉLA!");
+    expect(Greeter('BÉLA, SANYI')).toBe("HELLO BÉLA, AND SANYI!");
   })
