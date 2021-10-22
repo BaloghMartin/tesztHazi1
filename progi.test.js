@@ -1,40 +1,40 @@
 const Greeter = require('./progi');
 
-  test('itShouldWork', () => {
+  test('itShouldBeTrue', () => {
     expect(true).toBe(true);  });
 
-  test('emptyInputTest', () => {
+  test('itShouldGreetWithoutGivingNames', () => {
     expect(Greeter()).toBe("Hello, my friend.");
   });
 
-  test('oneNameInputTest', () => {
+  test('itShouldGreetWithOneNameGiven', () => {
     expect(Greeter("Martin")).toBe("Hello, Martin.");
   });
 
-  test('multipleNames', () => {
+  test('itShouldGreetWithMultipleNamesGivenAsString', () => {
     expect(Greeter("Martin, Beni")).toBe("Hello, Martin, and Beni.");
   })
-  test('multipleNamesAsArray', () => {
+  test('itShouldGreetWithMultipleNamesGivenAsArray', () => {
     expect(Greeter('Martin', 'Beni')).toBe("Hello, Martin, and Beni.");
   })
-  test('multipleNamesAsArrayAndNotArray', () => {
+  test('itShouldGreetWithMultipleNamesGivenAsArrayAndString', () => {
     expect(Greeter('Martin', 'Beni, Gaga')).toBe("Hello, Martin, Beni, and Gaga.");
   })
-  test('multipleNamesAsArrayAndNotArray2', () => {
+  test('itShouldGreetWithMultipleNamesGivenAsMultipleStrings', () => {
     expect(Greeter('Martin, Kris', 'Beni, Gaga')).toBe("Hello, Martin, Kris, Beni, and Gaga.");
   })
-  test('oneNameInputTestShouting', () => {
+  test('itShouldShoutWithOneAllCapitalNameGiven', () => {
     expect(Greeter('BÉLAA')).toBe("HELLO BÉLAA!");
   })
-  test('multiplNamesShouting', () =>{
+  test('itShouldShoutWithMultipleAllCapitalNamesGivenAsString', () =>{
     expect(Greeter('BÉLA, SANYI')).toBe("HELLO BÉLA, AND SANYI!");
   })
-  test('multiplNamesShouting2', () =>{
+  test('itShouldShoutWithMultipleAllCapitalNamesGivenAsStringAndArray', () =>{
     expect(Greeter('BÉLA, SANYI', 'GERI')).toBe("HELLO BÉLA, SANYI, AND GERI!");
   })
-  test('mixedNames', () =>{
+  test('itShouldGreetLowerCaseNamesAndShoutAllCapitalNames', () =>{
   expect(Greeter('JAY', 'Maya', 'Alice', 'BOB', 'Charlotte')).toBe("Hello, Maya, Alice, and Charlotte. AND HELLO JAY, AND BOB!");
   })
-  test('mixedNames2', () =>{
+  test('itShouldGreetLowerCaseNamesAndShoutAllCapitalNamesGivenAsAMixOfStringAndArray', () =>{
     expect(Greeter('JAY', 'Maya', 'Alice', 'BOB, Martin', 'Charlotte')).toBe("Hello, Maya, Alice, Martin, and Charlotte. AND HELLO JAY, AND BOB!");
     })
