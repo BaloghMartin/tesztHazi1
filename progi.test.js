@@ -1,6 +1,6 @@
 const Greeter = require('./progi');
 
-  test('itShouldWor', () => {
+  test('itShouldWork', () => {
     expect(true).toBe(true);  });
 
   test('emptyInputTest', () => {
@@ -32,9 +32,9 @@ const Greeter = require('./progi');
   test('multiplNamesShouting2', () =>{
     expect(Greeter('BÉLA, SANYI', 'GERI')).toBe("HELLO BÉLA, SANYI, AND GERI!");
   })
-  test('mixed names', () =>{
+  test('mixedNames', () =>{
   expect(Greeter('JAY', 'Maya', 'Alice', 'BOB', 'Charlotte')).toBe("Hello, Maya, Alice, and Charlotte. AND HELLO JAY, AND BOB!");
   })
-  test('mixed names', () =>{
+  test('mixedNames2', () =>{
     expect(Greeter('JAY', 'Maya', 'Alice', 'BOB, Martin', 'Charlotte')).toBe("Hello, Maya, Alice, Martin, and Charlotte. AND HELLO JAY, AND BOB!");
     })
